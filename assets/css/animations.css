@@ -184,8 +184,12 @@ html, body {
 
 .animate-gradient-border {
   animation: gradientBorder 19s ease infinite;
-  opacity: 0.7;
-  filter: blur(1px);
+  background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+}
+
+/* Image hover effect */
+.group:hover .animate-gradient-border {
+  animation: gradientBorder 19s ease infinite; 
 }
 
 /* Continuous Scrolling Animations */

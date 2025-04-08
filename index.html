@@ -64,7 +64,7 @@
           <h3 class="text-2xl text-text dark:text-dark-text mb-4 font-serif" data-aos="fade-right" data-aos-delay="100">Hey Welcome!</h3>
           
           <!-- Introduction -->
-          <h1 class="text-1xl md:text-3xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent mb-6 typing-text" data-aos="fade-up" data-aos-delay="200">
+            <h1 class="text-3xl md:text-3xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent mb-6 typing-text" data-aos="fade-up" data-aos-delay="200">
             I'm Shakiran Nannyombi
           </h1>
 
@@ -92,22 +92,28 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="min-h-screen flex items-center py-20 relative bg-background/80 dark:bg-dark-background/80">
-      <div class="container mx-auto px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <!-- Left Side - Image Card -->
-          <div class="relative group" data-aos="fade-right">
-            <div class="relative rounded-2xl p-6">
-              <div class="aspect-w-1 aspect-h-1 w-auto mx-auto overflow-hidden rounded-[20%] relative" data-aos="zoom-in">
+    <section id="about" class="min-h-screen py-8 sm:py-15 relative overflow-hidden">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center max-w-6xl mx-auto">
+          <!-- Image Container -->
+          <div class="w-full flex justify-center mb-4 sm:mb-8" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative group">
+              <div class="w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] overflow-hidden rounded-[20%] relative">
+                <!-- Gradient Border -->
                 <div class="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-[20%] animate-gradient-border"></div>
-                <img src="./assets/images/me.jpg" alt="Dev_Kiran" class="relative w-full h-full object-cover object-center transform group-hover:scale-105 transition duration-700 rounded-[20%] p-[5px]">
+                <!-- Image -->
+                <img 
+                  src="./assets/images/me.jpg" 
+                  alt="Dev_Kiran" 
+                  class="relative w-full h-full object-cover object-center transform group-hover:scale-105 transition duration-700 rounded-[20%] p-[8px]"
+                >
               </div>
             </div>
           </div>
 
-          <!-- Right Side - Contact & Social -->
-          <div class="space-y-8 backdrop-blur-sm bg-white/5 dark:bg-black/5 p-8 rounded-2xl" data-aos="fade-left">
-            <div>
+          <!-- Content Container -->
+          <div class="w-full bg-white/10 dark:bg-gray-800/20 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-lg space-y-4 sm:space-y-6">
+            <div class="text-center sm:text-left">
               <h2 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent mb-4" data-aos="fade-up">About Me</h2>
               <p class="text-lg text-text/80 dark:text-dark-text/80 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
                 I'm a Software Engineer in the making, passionate about <span class="font-bold">Data Science, Web Development, and Design</span>.
@@ -118,22 +124,22 @@
             </div>
 
             <!-- Contact Info -->
-            <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
-              <h3 class="text-xl font-semibold text-secondary dark:text-dark-accent">Get in Touch</h3>
-              <div class="space-y-2">
-                <a href="shakirannannyombi@gmail.com" class="flex items-center gap-3 text-text/80 dark:text-dark-text/80 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300">
+            <div class="space-y-4" data-aos="fade-up">
+              <h3 class="text-xl font-semibold text-secondary dark:text-dark-accent text-center sm:text-left">Get in Touch</h3>
+              <div class="flex flex-col items-center sm:items-start space-y-2">
+                <a href="mailto:shakirannannyombi@gmail.com" class="flex items-center gap-3 text-text/80 dark:text-dark-text/80 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   shakirannannyombi@gmail.com
                 </a>
-                <a href="devkiran256@gmail.com" class="flex items-center gap-3 text-text/80 dark:text-dark-text/80 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    devkiran256@gmail.com
-                  </a>
-                <a href="tel:+1234567890" class="flex items-center gap-3 text-text/80 dark:text-dark-text/80 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300">
+                <a href="mailto:devkiran256@gmail.com" class="flex items-center gap-3 text-text/80 dark:text-dark-text/80 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  devkiran256@gmail.com
+                </a>
+                <a href="tel:+256770522627" class="flex items-center gap-3 text-text/80 dark:text-dark-text/80 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
@@ -143,9 +149,9 @@
             </div>
 
             <!-- Social Links -->
-            <div class="space-y-4" data-aos="fade-up" data-aos-delay="300">
-              <h3 class="text-xl font-semibold text-secondary dark:text-dark-accent">Connect With Me</h3>
-              <div class="flex flex-wrap gap-6">
+            <div class="space-y-4" data-aos="fade-up">
+              <h3 class="text-xl font-semibold text-secondary dark:text-dark-accent text-center sm:text-left">Connect With Me</h3>
+              <div class="flex flex-wrap justify-center sm:justify-start gap-6">
                 <!-- GitHub -->
                 <a href="https://github.com/Shakiran-Nannyombi" class="text-text/70 dark:text-dark-text/70 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300 transform hover:scale-110">
                   <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -208,123 +214,199 @@
       </div>
     </section>
 
+
     <!-- Skills Section -->
     <section id="skills" class="min-h-screen py-20 overflow-hidden">
       <div class="container mx-auto px-8">
         <!-- Section Header -->
         <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent mb-4">
+          <h2 class="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent mb-4">
             Skills & Services
           </h2>
-          <p class="text-lg text-text/80 dark:text-dark-text/80 max-w-2xl mx-auto">
-            Specialized in full-stack development, design, and data science solutions.
-          </p>
         </div>
-
-        <!-- Services -->
-        <div class="mb-16" data-aos="fade-up">
-          <h3 class="text-2xl font-bold text-secondary dark:text-dark-secondary mb-8 text-center">Services I Offer</h3>
-          <div class="relative">
-            <div class="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-background dark:from-dark-background to-transparent z-10"></div>
-            <div class="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-background dark:from-dark-background to-transparent z-10"></div>
-            <div class="flex animate-scroll-left">
-              <div class="flex gap-8 items-center whitespace-nowrap px-4">
-                <div class="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
-                  <svg class="w-5 h-5 text-primary dark:text-dark-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <span>Web Development</span>
-                </div>
-                <div class="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
-                  <svg class="w-5 h-5 text-secondary dark:text-dark-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                  </svg>
-                  <span>UI/UX Design</span>
-                </div>
-                <div class="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
-                  <svg class="w-5 h-5 text-accent dark:text-dark-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                  <span>Data Science</span>
-                </div>
-                <div class="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
-                  <svg class="w-5 h-5 text-primary dark:text-dark-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                  </svg>
-                  <span>Full Stack Development</span>
-                </div>
-                <div class="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
-                  <svg class="w-5 h-5 text-secondary dark:text-dark-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-                  </svg>
-                  <span>Responsive Design</span>
-                </div>
+          <!-- Services Section -->
+          <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-4">
+              <!-- Skills List -->
+              <div class="w-full md:w-1/2" data-aos="fade-up">
+                <h3 class="text-2xl text-primary dark:text-dark-primary mb-8 text-center md:text-center">Services I Offer</h3>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                  <li class="flex flex-col items-center gap-2">
+                    <svg class="w-8 h-8 text-primary dark:text-dark-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <span>Web Development</span>
+                  </li>
+                  <li class="flex flex-col items-center gap-2">
+                    <svg class="w-8 h-8 text-secondary dark:text-dark-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                    </svg>
+                    <span>UI/UX Design</span>
+                  </li>
+                  <li class="flex flex-col items-center gap-2">
+                    <svg class="w-8 h-8 text-accent dark:text-dark-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <span>Data Science</span>
+                  </li>
+                  <li class="flex flex-col items-center gap-2">
+                    <svg class="w-8 h-8 text-primary dark:text-dark-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                    <span>Full Stack Development</span>
+                  </li>
+                  <li class="flex flex-col items-center gap-2">
+                    <svg class="w-8 h-8 text-secondary dark:text-dark-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                    </svg>
+                    <span>Responsive Design</span>
+                  </li>
+                </ul>
               </div>
-              <!-- Duplicate for seamless loop -->
-              <div class="flex gap-8 items-center whitespace-nowrap px-4" aria-hidden="true">
-                <!-- Same content as above for seamless scrolling -->
+              
+              <!-- Image Section -->
+              <div class="w-full md:w-1/2 flex justify-center md:justify-center" data-aos="fade-left">
+                <div class="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
+                  <img src="/assets/images/about.png" alt="Light Avatar" class="relative inset-0 w-full h-full object-contain dark:hidden">
+                  <img src="/assets/images/about1.png" alt="Dark Avatar" class="relative inset-0 w-full h-full object-contain hidden dark:block">
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Languages -->
-        <div class="mb-16" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-2xl font-bold text-secondary dark:text-dark-secondary mb-8 text-center">Languages & Frameworks</h3>
-          <div class="relative">
-            <div class="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-background dark:from-dark-background to-transparent z-10"></div>
-            <div class="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-background dark:from-dark-background to-transparent z-10"></div>
-            <div class="flex animate-scroll-right">
-              <div class="flex gap-8 items-center whitespace-nowrap px-4">
-                <div class="px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">JavaScript</div>
-                <div class="px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">Python</div>
-                <div class="px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">React</div>
-                <div class="px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">Next.js</div>
-                <div class="px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">TailwindCSS</div>
-                <div class="px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">Node.js</div>
-                <div class="px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">Express</div>
-                <div class="px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">MongoDB</div>
-              </div>
-              <!-- Duplicate for seamless loop -->
-              <div class="flex gap-8 items-center whitespace-nowrap px-4" aria-hidden="true">
-                <!-- Same content as above for seamless scrolling -->
+          <!-- Languages -->
+          <div class="mb-16" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-3xl text-primary dark:text-dark-primary mb-8 text-center">Languages & Frameworks</h3>
+            <div class="relative overflow-hidden">
+              <div class="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-background dark:from-dark-background to-transparent z-10"></div>
+              <div class="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-background dark:from-dark-background to-transparent z-10"></div>
+              <div class="flex animate-infinite-scroll">
+                <!-- Original set -->
+                <div class="flex gap-8 items-center whitespace-nowrap px-4">
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
+                    <img src="/assets/images/tech/javascript.svg" alt="JavaScript" class="w-8 h-8">
+                    <span>JavaScript</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
+                    <img src="/assets/images/tech/python.svg" alt="Python" class="w-8 h-8">
+                    <span>Python</span>
+                  </div>
+                  <!-- <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
+                    <img src="/assets/images/tech/react.svg" alt="React" class="w-8 h-8">
+                    <span>React</span>
+                  </div> -->
+                  <!-- <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
+                    <img src="/assets/images/tech/nextjs.svg" alt="Next.js" class="w-8 h-8">
+                    <span>Next.js</span>
+                  </div> -->
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
+                    <img src="/assets/images/tech/tailwind.svg" alt="TailwindCSS" class="w-8 h-8">
+                    <span>TailwindCSS</span>
+                  </div>
+                  <!-- <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
+                    <img src="/assets/images/tech/nodejs.svg" alt="Node.js" class="w-8 h-8">
+                    <span>Node.js</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
+                    <img src="/assets/images/tech/express.svg" alt="Express" class="w-8 h-8">
+                    <span>Express</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
+                    <img src="/assets/images/tech/mongodb.svg" alt="MongoDB" class="w-8 h-8">
+                    <span>MongoDB</span>
+                  </div> -->
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="flex gap-8 items-center whitespace-nowrap px-4">
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
+                    <img src="/assets/images/tech/javascript.svg" alt="JavaScript" class="w-8 h-8">
+                    <span>JavaScript</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
+                    <img src="/assets/images/tech/python.svg" alt="Python" class="w-8 h-8">
+                    <span>Python</span>
+                  </div>
+                  <!-- <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
+                    <img src="/assets/images/tech/react.svg" alt="React" class="w-8 h-8">
+                    <span>React</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
+                    <img src="/assets/images/tech/nextjs.svg" alt="Next.js" class="w-8 h-8">
+                    <span>Next.js</span>
+                  </div> -->
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
+                    <img src="/assets/images/tech/tailwind.svg" alt="TailwindCSS" class="w-8 h-8">
+                    <span>TailwindCSS</span>
+                  </div>
+                  <!-- <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
+                    <img src="/assets/images/tech/nodejs.svg" alt="Node.js" class="w-8 h-8">
+                    <span>Node.js</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
+                    <img src="/assets/images/tech/express.svg" alt="Express" class="w-8 h-8">
+                    <span>Express</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
+                    <img src="/assets/images/tech/mongodb.svg" alt="MongoDB" class="w-8 h-8">
+                    <span>MongoDB</span>
+                  </div> -->
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Tools -->
-        <div class="mb-16" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="text-2xl font-bold text-secondary dark:text-dark-secondary mb-8 text-center">Tools I Use</h3>
-          <div class="relative">
-            <div class="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-background dark:from-dark-background to-transparent z-10"></div>
-            <div class="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-background dark:from-dark-background to-transparent z-10"></div>
-            <div class="flex animate-scroll-left">
-              <div class="flex gap-8 items-center whitespace-nowrap px-4">
-                <div class="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
-                  <img src="./assets/images/tools/figma.svg" alt="Figma" class="w-5 h-5">
-                  <span>Figma</span>
+          <!-- Tools -->
+          <div class="mb-16" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-3xl text-primary dark:text-dark-primary mb-8 text-center">Tools I Use</h3>
+            <div class="relative">
+              <div class="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-background dark:from-dark-background to-transparent z-10"></div>
+              <div class="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-background dark:from-dark-background to-transparent z-10"></div>
+              <div class="flex animate-infinite-scroll">
+                <div class="flex gap-8 items-center whitespace-nowrap px-4">
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-sm hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-300">
+                    <img src="assets/images/tools/figma.svg" alt="Figma" class="w-8 h-8">
+                    <span class="font-medium">Figma</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-sm hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-300">
+                    <img src="assets/images/tools/framer.svg" alt="Framer" class="w-8 h-8">
+                    <span class="font-medium">Framer</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-sm hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-300">
+                    <img src="assets/images/tools/canva.svg" alt="Canva" class="w-8 h-8">
+                    <span class="font-medium">Canva</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-sm hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-300">
+                    <img src="assets/images/tools/vscode.svg" alt="VS Code" class="w-8 h-8">
+                    <span class="font-medium">VS Code</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-sm hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-300">
+                    <img src="assets/images/tools/cursor.svg" alt="Cursor" class="w-8 h-8 dark:invert">
+                    <span class="font-medium">Cursor</span>
+                  </div>
                 </div>
-                <div class="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
-                  <img src="./assets/images/tools/framer.svg" alt="Framer" class="w-5 h-5">
-                  <span>Framer</span>
+                <!-- Duplicate for seamless loop -->
+                <div class="flex gap-8 items-center whitespace-nowrap px-4" aria-hidden="true">
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-sm hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-300">
+                    <img src="assets/images/tools/figma.svg" alt="Figma" class="w-8 h-8">
+                    <span class="font-medium">Figma</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-sm hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-300">
+                    <img src="assets/images/tools/framer.svg" alt="Framer" class="w-8 h-8">
+                    <span class="font-medium">Framer</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-sm hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-300">
+                    <img src="assets/images/tools/canva.svg" alt="Canva" class="w-8 h-8">
+                    <span class="font-medium">Canva</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-sm hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-300">
+                    <img src="assets/images/tools/vscode.svg" alt="VS Code" class="w-8 h-8">
+                    <span class="font-medium">VS Code</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-sm hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-300">
+                    <img src="assets/images/tools/cursor.svg" alt="Cursor" class="w-8 h-8 dark:invert">
+                    <span class="font-medium">Cursor</span>
+                  </div>
                 </div>
-                <div class="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
-                  <img src="./assets/images/tools/canva.svg" alt="Canva" class="w-5 h-5">
-                  <span>Canva</span>
-                </div>
-                <div class="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
-                  <img src="./assets/images/tools/vscode.svg" alt="VS Code" class="w-5 h-5">
-                  <span>Visual Studio Code</span>
-                </div>
-                <div class="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 dark:bg-black/5 backdrop-blur-sm">
-                  <img src="./assets/images/tools/cursor.svg" alt="Cursor" class="w-5 h-5">
-                  <span>Cursor</span>
-                </div>
-              </div>
-              <!-- Duplicate for seamless loop -->
-              <div class="flex gap-8 items-center whitespace-nowrap px-4" aria-hidden="true">
-                <!-- Same content as above for seamless scrolling -->
               </div>
             </div>
           </div>
@@ -350,7 +432,7 @@
           <!-- demo Project -->
           <div class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" data-aos="fade-up">
             <div class="relative aspect-video overflow-hidden">
-              <img src="./assets/images/projectDefault.jpeg" alt="Finnage - Finance App Landing Page" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+              <img src="./assets/images/project.jpeg" alt="Finnage - Finance App Landing Page" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-text dark:text-dark-text mb-2">Demo Project Template</h3>
@@ -364,7 +446,7 @@
           <!-- demo Project -->
           <div class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
             <div class="relative aspect-video overflow-hidden">
-              <img src="./assets/images/projectDefault.jpeg" alt="Archinest - Architect Agency Template" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+              <img src="./assets/images/project.jpeg" alt="Archinest - Architect Agency Template" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-text dark:text-dark-text mb-2">Demo Project Template</h3>
@@ -377,7 +459,7 @@
 
         <!-- View All Projects Button -->
         <div class="flex justify-center mt-12" data-aos="fade-up" data-aos-delay="400">
-          <a href="#" class="inline-flex items-center px-6 py-3 text-lg border-2 border-primary hover:border-secondary dark:border-dark-primary hover:dark:border-dark-accent text-primary dark:text-dark-primary hover:bg-secondary hover:text-white dark:hover:bg-dark-accent dark:hover:text-[#0b0410] transition-all duration-300 rounded-lg group">
+          <a href="projects.html" class="inline-flex items-center px-6 py-3 text-lg border-2 border-primary hover:border-secondary dark:border-dark-primary hover:dark:border-dark-accent text-primary dark:text-dark-primary hover:bg-secondary hover:text-white dark:hover:bg-dark-accent dark:hover:text-[#0b0410] transition-all duration-300 rounded-lg group">
             View All Projects
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
