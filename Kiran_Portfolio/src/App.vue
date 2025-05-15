@@ -1,52 +1,75 @@
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data() {
+    return {
+      isMenuOpen: false
+    }
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen
+    },
+    closeMenu() {
+      this.isMenuOpen = false
+    }
+  },
+  watch: {
+    $route() {
+      this.closeMenu()
+    }
+  }
 }
 </script>
 
 <template>
   <div class="min-h-screen">
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 transition-transform duration-300">
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+         :class="{ 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm': !isMenuOpen }">
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-16">
           <!-- Logo -->
-          <router-link to="/" class="text-2xl font-bold text-primary dark:text-dark-primary">
+          <router-link to="/" class="text-2xl font-bold text-primary dark:text-dark-primary hover:opacity-80 transition-opacity">
             Kiran
           </router-link>
 
           <!-- Desktop Navigation -->
           <div class="hidden md:flex space-x-8">
-            <router-link to="/" class="nav-link">Home</router-link>
-            <router-link to="/about" class="nav-link">About</router-link>
-            <router-link to="/skills" class="nav-link">Skills</router-link>
-            <router-link to="/experience" class="nav-link">Experience</router-link>
-            <router-link to="/services" class="nav-link">Services</router-link>
-            <router-link to="/projects" class="nav-link">Projects</router-link>
-            <router-link to="/blog" class="nav-link">Blog</router-link>
-            <router-link to="/contact" class="nav-link">Contact</router-link>
+            <router-link v-for="route in routes" 
+                        :key="route.path"
+                        :to="route.path"
+                        class="nav-link"
+                        :class="{ 'text-primary dark:text-dark-primary': $route.path === route.path }">
+              {{ route.name }}
+            </router-link>
           </div>
 
           <!-- Mobile Menu Button -->
-          <button id="menu-icon" class="md:hidden">
-            <span class="block w-6 h-0.5 bg-primary dark:bg-dark-primary mb-1.5 transition-transform"></span>
-            <span class="block w-6 h-0.5 bg-primary dark:bg-dark-primary mb-1.5 transition-opacity"></span>
-            <span class="block w-6 h-0.5 bg-primary dark:bg-dark-primary transition-transform"></span>
+          <button @click="toggleMenu" class="md:hidden focus:outline-none">
+            <div class="w-6 h-6 flex flex-col justify-center items-center">
+              <span class="block w-6 h-0.5 bg-primary dark:bg-dark-primary mb-1.5 transition-all"
+                    :class="{ 'transform rotate-45 translate-y-2': isMenuOpen }"></span>
+              <span class="block w-6 h-0.5 bg-primary dark:bg-dark-primary mb-1.5 transition-all"
+                    :class="{ 'opacity-0': isMenuOpen }"></span>
+              <span class="block w-6 h-0.5 bg-primary dark:bg-dark-primary transition-all"
+                    :class="{ 'transform -rotate-45 -translate-y-2': isMenuOpen }"></span>
+            </div>
           </button>
         </div>
       </div>
 
       <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden hidden">
-        <div class="px-4 py-2 space-y-2">
-          <router-link to="/" class="mobile-nav-link">Home</router-link>
-          <router-link to="/about" class="mobile-nav-link">About</router-link>
-          <router-link to="/skills" class="mobile-nav-link">Skills</router-link>
-          <router-link to="/experience" class="mobile-nav-link">Experience</router-link>
-          <router-link to="/services" class="mobile-nav-link">Services</router-link>
-          <router-link to="/projects" class="mobile-nav-link">Projects</router-link>
-          <router-link to="/blog" class="mobile-nav-link">Blog</router-link>
-          <router-link to="/contact" class="mobile-nav-link">Contact</router-link>
+      <div class="md:hidden transition-all duration-300 ease-in-out"
+           :class="{ 'max-h-96 opacity-100': isMenuOpen, 'max-h-0 opacity-0': !isMenuOpen }">
+        <div class="px-4 py-2 space-y-2 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
+          <router-link v-for="route in routes" 
+                      :key="route.path"
+                      :to="route.path"
+                      class="mobile-nav-link"
+                      :class="{ 'text-primary dark:text-dark-primary': $route.path === route.path }">
+            {{ route.name }}
+          </router-link>
         </div>
       </div>
     </nav>
@@ -54,7 +77,7 @@ export default {
     <!-- Main Content -->
     <main class="pt-16">
       <router-view v-slot="{ Component }">
-        <transition name="fade" mode="out-in">
+        <transition name="page" mode="out-in">
           <component :is="Component" />
         </transition>
       </router-view>
@@ -64,21 +87,36 @@ export default {
 
 <style>
 .nav-link {
-  @apply text-gray-800 dark:text-white hover:text-primary dark:hover:text-dark-primary transition-colors duration-300;
+  @apply text-gray-800 dark:text-white hover:text-primary dark:hover:text-dark-primary transition-colors duration-300 relative;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary dark:bg-dark-primary transition-all duration-300;
+}
+
+.nav-link:hover::after,
+.router-link-active::after {
+  @apply w-full;
 }
 
 .mobile-nav-link {
   @apply block py-2 text-gray-800 dark:text-white hover:text-primary dark:hover:text-dark-primary transition-colors duration-300;
 }
 
-/* Router Transitions */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease;
+/* Page Transitions */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s ease-out;
 }
 
-.fade-enter-from,
-.fade-leave-to {
+.page-enter-from {
   opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
 }
 </style>
