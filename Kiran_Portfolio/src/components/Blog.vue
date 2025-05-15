@@ -21,46 +21,30 @@
           <h2 class="text-3xl font-bold text-primary dark:text-dark-primary mb-12" data-aos="fade-up">Featured Posts</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Featured Post 1 -->
-            <div class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" data-aos="fade-up">
+            <div v-for="post in featuredPosts" :key="post.title" 
+                 class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" 
+                 data-aos="fade-up">
               <div class="relative aspect-video overflow-hidden">
                 <!-- Image placeholder -->
                 <div class="w-full h-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
               </div>
               <div class="p-6">
                 <div class="flex gap-2 mb-4">
-                  <span class="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">Web Development</span>
-                  <span class="px-3 py-1 text-sm rounded-full bg-secondary/10 text-secondary dark:bg-dark-secondary/10 dark:text-dark-secondary">Vue.js</span>
+                  <span class="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                    {{ post.category }}
+                  </span>
+                  <span v-for="tag in post.tags" :key="tag" 
+                        class="px-3 py-1 text-sm rounded-full bg-secondary/10 text-secondary dark:bg-dark-secondary/10 dark:text-dark-secondary">
+                    {{ tag }}
+                  </span>
                 </div>
-                <h3 class="text-xl font-bold text-text dark:text-dark-text mb-2">Getting Started with Vue.js</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">Learn the fundamentals of Vue.js and build your first application...</p>
+                <h3 class="text-xl font-bold text-text dark:text-dark-text mb-2">{{ post.title }}</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">{{ post.excerpt }}</p>
                 <div class="flex items-center gap-4">
                   <div class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700"></div>
                   <div>
-                    <p class="font-medium text-text dark:text-dark-text">Dev_Kiran</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">March 15, 2024</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Featured Post 2 -->
-            <div class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
-              <div class="relative aspect-video overflow-hidden">
-                <!-- Image placeholder -->
-                <div class="w-full h-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-              </div>
-              <div class="p-6">
-                <div class="flex gap-2 mb-4">
-                  <span class="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">Data Science</span>
-                  <span class="px-3 py-1 text-sm rounded-full bg-secondary/10 text-secondary dark:bg-dark-secondary/10 dark:text-dark-secondary">Python</span>
-                </div>
-                <h3 class="text-xl font-bold text-text dark:text-dark-text mb-2">Data Analysis with Python</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">A comprehensive guide to data analysis using Python libraries...</p>
-                <div class="flex items-center gap-4">
-                  <div class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700"></div>
-                  <div>
-                    <p class="font-medium text-text dark:text-dark-text">Dev_Kiran</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">March 10, 2024</p>
+                    <p class="font-medium text-text dark:text-dark-text">{{ post.author }}</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">{{ post.date }}</p>
                   </div>
                 </div>
               </div>
@@ -74,67 +58,28 @@
         <div class="container mx-auto px-8">
           <h2 class="text-3xl font-bold text-primary dark:text-dark-primary mb-12" data-aos="fade-up">Recent Posts</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Recent Post 1 -->
-            <div class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" data-aos="fade-up">
+            <!-- Recent Post -->
+            <div v-for="(post, index) in recentPosts" :key="post.title" 
+                 class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" 
+                 data-aos="fade-up" 
+                 :data-aos-delay="index * 100">
               <div class="relative aspect-video overflow-hidden">
                 <!-- Image placeholder -->
                 <div class="w-full h-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
               </div>
               <div class="p-6">
                 <div class="flex gap-2 mb-4">
-                  <span class="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">UI/UX</span>
+                  <span class="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                    {{ post.category }}
+                  </span>
                 </div>
-                <h3 class="text-xl font-bold text-text dark:text-dark-text mb-2">Design Principles</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">Essential design principles for creating beautiful interfaces...</p>
+                <h3 class="text-xl font-bold text-text dark:text-dark-text mb-2">{{ post.title }}</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">{{ post.excerpt }}</p>
                 <div class="flex items-center gap-4">
                   <div class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700"></div>
                   <div>
-                    <p class="font-medium text-text dark:text-dark-text">Dev_Kiran</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">March 5, 2024</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Recent Post 2 -->
-            <div class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
-              <div class="relative aspect-video overflow-hidden">
-                <!-- Image placeholder -->
-                <div class="w-full h-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-              </div>
-              <div class="p-6">
-                <div class="flex gap-2 mb-4">
-                  <span class="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">JavaScript</span>
-                </div>
-                <h3 class="text-xl font-bold text-text dark:text-dark-text mb-2">Modern JavaScript</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">Exploring modern JavaScript features and best practices...</p>
-                <div class="flex items-center gap-4">
-                  <div class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700"></div>
-                  <div>
-                    <p class="font-medium text-text dark:text-dark-text">Dev_Kiran</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">March 1, 2024</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Recent Post 3 -->
-            <div class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
-              <div class="relative aspect-video overflow-hidden">
-                <!-- Image placeholder -->
-                <div class="w-full h-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-              </div>
-              <div class="p-6">
-                <div class="flex gap-2 mb-4">
-                  <span class="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">DevOps</span>
-                </div>
-                <h3 class="text-xl font-bold text-text dark:text-dark-text mb-2">CI/CD Pipeline</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">Setting up efficient CI/CD pipelines for your projects...</p>
-                <div class="flex items-center gap-4">
-                  <div class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700"></div>
-                  <div>
-                    <p class="font-medium text-text dark:text-dark-text">Dev_Kiran</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">February 25, 2024</p>
+                    <p class="font-medium text-text dark:text-dark-text">{{ post.author }}</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">{{ post.date }}</p>
                   </div>
                 </div>
               </div>
@@ -148,55 +93,19 @@
         <div class="container mx-auto px-8">
           <h2 class="text-3xl font-bold text-primary dark:text-dark-primary mb-12" data-aos="fade-up">Categories</h2>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <!-- Category 1 -->
-            <div class="p-6 rounded-xl bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 group" data-aos="fade-up">
+            <!-- Category -->
+            <div v-for="(category, index) in categories" :key="category.name" 
+                 class="p-6 rounded-xl bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 group" 
+                 data-aos="fade-up" 
+                 :data-aos-delay="index * 100">
               <div class="flex flex-col items-center text-center gap-4">
                 <div class="w-16 h-16 rounded-full bg-primary/10 dark:bg-dark-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <svg class="w-8 h-8 text-primary dark:text-dark-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                 </div>
-                <h3 class="text-xl font-semibold">Web Development</h3>
-                <p class="text-gray-600 dark:text-gray-400">12 Articles</p>
-              </div>
-            </div>
-
-            <!-- Category 2 -->
-            <div class="p-6 rounded-xl bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
-              <div class="flex flex-col items-center text-center gap-4">
-                <div class="w-16 h-16 rounded-full bg-secondary/10 dark:bg-dark-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <svg class="w-8 h-8 text-secondary dark:text-dark-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                </div>
-                <h3 class="text-xl font-semibold">Data Science</h3>
-                <p class="text-gray-600 dark:text-gray-400">8 Articles</p>
-              </div>
-            </div>
-
-            <!-- Category 3 -->
-            <div class="p-6 rounded-xl bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
-              <div class="flex flex-col items-center text-center gap-4">
-                <div class="w-16 h-16 rounded-full bg-accent/10 dark:bg-dark-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <svg class="w-8 h-8 text-accent dark:text-dark-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                  </svg>
-                </div>
-                <h3 class="text-xl font-semibold">UI/UX Design</h3>
-                <p class="text-gray-600 dark:text-gray-400">6 Articles</p>
-              </div>
-            </div>
-
-            <!-- Category 4 -->
-            <div class="p-6 rounded-xl bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
-              <div class="flex flex-col items-center text-center gap-4">
-                <div class="w-16 h-16 rounded-full bg-primary/10 dark:bg-dark-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <svg class="w-8 h-8 text-primary dark:text-dark-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-                  </svg>
-                </div>
-                <h3 class="text-xl font-semibold">DevOps</h3>
-                <p class="text-gray-600 dark:text-gray-400">4 Articles</p>
+                <h3 class="text-xl font-semibold">{{ category.name }}</h3>
+                <p class="text-gray-600 dark:text-gray-400">{{ category.count }} Articles</p>
               </div>
             </div>
           </div>
@@ -207,11 +116,60 @@
 </template>
 
 <script>
+import '../assets/css/animations.css'
+import { initTextAnimations } from '../assets/js/text-animations.js'
+
 export default {
   name: 'Blog',
   data() {
     return {
-      // Add your blog data here
+      featuredPosts: [
+        {
+          title: 'Getting Started with Vue.js',
+          excerpt: 'Learn the fundamentals of Vue.js and build your first application...',
+          category: 'Web Development',
+          tags: ['Vue.js'],
+          author: 'Dev_Kiran',
+          date: 'March 15, 2024'
+        },
+        {
+          title: 'Data Analysis with Python',
+          excerpt: 'A comprehensive guide to data analysis using Python libraries...',
+          category: 'Data Science',
+          tags: ['Python'],
+          author: 'Dev_Kiran',
+          date: 'March 10, 2024'
+        }
+      ],
+      recentPosts: [
+        {
+          title: 'Design Principles',
+          excerpt: 'Essential design principles for creating beautiful interfaces...',
+          category: 'UI/UX',
+          author: 'Dev_Kiran',
+          date: 'March 5, 2024'
+        },
+        {
+          title: 'Modern JavaScript',
+          excerpt: 'Exploring modern JavaScript features and best practices...',
+          category: 'JavaScript',
+          author: 'Dev_Kiran',
+          date: 'March 1, 2024'
+        },
+        {
+          title: 'CI/CD Pipeline',
+          excerpt: 'Setting up efficient CI/CD pipelines for your projects...',
+          category: 'DevOps',
+          author: 'Dev_Kiran',
+          date: 'February 25, 2024'
+        }
+      ],
+      categories: [
+        { name: 'Web Development', count: 12, icon: 'code' },
+        { name: 'Data Science', count: 8, icon: 'chart' },
+        { name: 'UI/UX Design', count: 6, icon: 'design' },
+        { name: 'DevOps', count: 4, icon: 'server' }
+      ]
     }
   },
   mounted() {
@@ -227,6 +185,8 @@ export default {
         anchorPlacement: 'top-bottom'
       });
     }
+    // Initialize text animations
+    initTextAnimations()
   }
 }
 </script>

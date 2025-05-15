@@ -23,8 +23,7 @@
             <!-- Featured Project 1 -->
             <div class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" data-aos="fade-up">
               <div class="relative aspect-video overflow-hidden">
-                <!-- Image placeholder -->
-                <div class="w-full h-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
+                <img :src="projectImage" alt="Portfolio Project" class="w-full h-full object-cover" />
               </div>
               <div class="p-6">
                 <div class="flex gap-2 mb-4">
@@ -53,8 +52,7 @@
             <!-- Featured Project 2 -->
             <div class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
               <div class="relative aspect-video overflow-hidden">
-                <!-- Image placeholder -->
-                <div class="w-full h-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
+                <img :src="projectImage" alt="Data Analysis Project" class="w-full h-full object-cover" />
               </div>
               <div class="p-6">
                 <div class="flex gap-2 mb-4">
@@ -151,8 +149,7 @@
             <!-- Project 1 -->
             <div class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" data-aos="fade-up">
               <div class="relative aspect-video overflow-hidden">
-                <!-- Image placeholder -->
-                <div class="w-full h-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
+                <img :src="projectImage" alt="E-commerce Project" class="w-full h-full object-cover" />
               </div>
               <div class="p-6">
                 <div class="flex gap-2 mb-4">
@@ -174,8 +171,7 @@
             <!-- Project 2 -->
             <div class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
               <div class="relative aspect-video overflow-hidden">
-                <!-- Image placeholder -->
-                <div class="w-full h-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
+                <img :src="projectImage" alt="Machine Learning Project" class="w-full h-full object-cover" />
               </div>
               <div class="p-6">
                 <div class="flex gap-2 mb-4">
@@ -197,8 +193,7 @@
             <!-- Project 3 -->
             <div class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
               <div class="relative aspect-video overflow-hidden">
-                <!-- Image placeholder -->
-                <div class="w-full h-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
+                <img :src="projectImage" alt="Design System Project" class="w-full h-full object-cover" />
               </div>
               <div class="p-6">
                 <div class="flex gap-2 mb-4">
@@ -224,11 +219,14 @@
 </template>
 
 <script>
+import projectImage from '../assets/images/project.jpeg'
+import '../assets/css/animations.css'
+
 export default {
   name: 'Projects',
   data() {
     return {
-      // Add your projects data here
+      projectImage
     }
   },
   mounted() {

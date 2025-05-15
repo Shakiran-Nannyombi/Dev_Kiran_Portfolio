@@ -4,7 +4,7 @@
     <div class="bg-pattern-light dark:bg-pattern-dark"></div>
 
     <!-- Content Wrapper -->
-    <div id="content-wrapper" class="text-text dark:text-dark-text">
+    <div id="content-wrapper" class="text-text dark:text-dark-text relative z-2 min-h-screen w-full">
        <!-- Welcome Section -->
     <section id="home" class="min-h-screen flex items-center">
       <div class="container mx-auto px-8 py-32">
@@ -52,7 +52,7 @@
                 <div class="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-[20%] animate-gradient-border">
                 <!-- Image -->
                 <img 
-                  src="./assets/images/me.jpg" 
+                  :src="meImage" 
                   alt="Dev_Kiran" 
                   class="relative w-full h-full object-cover object-center transform group-hover:scale-105 transition duration-700 rounded-[20%] p-[8px]"
                 >
@@ -224,11 +224,17 @@
 </template>
 
 <script>
+import meImage from '../assets/images/me.jpg'
+import aboutImage from '../assets/images/about.png'
+import '../assets/css/animations.css'
+import { initTextAnimations } from '../assets/js/text-animations.js'
+
 export default {
   name: 'Home',
   data() {
     return {
-      // Add your data properties here
+      meImage,
+      aboutImage
     }
   },
   mounted() {
@@ -244,6 +250,8 @@ export default {
         anchorPlacement: 'top-bottom'
       });
     }
+    // Initialize text animations
+    initTextAnimations()
   },
   methods: {
     // Add your methods here
