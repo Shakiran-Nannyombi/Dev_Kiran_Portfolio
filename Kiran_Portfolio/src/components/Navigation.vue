@@ -1,5 +1,11 @@
 <template>
-  <nav class="fixed top-0 left-0 w-full z-[9999] bg-transparent transition-all duration-300 ease-in-out flex justify-between items-center px-8 py-4 max-w-[12000px] mx-auto" id="navbar">
+  <nav
+    :class="[
+      'fixed top-0 left-0 w-full z-[9999] bg-transparent transition-all duration-300 ease-in-out flex justify-between items-center px-8 py-4 max-w-[12000px] mx-auto',
+      { '-translate-y-full': hideNavbar, 'translate-y-0': !hideNavbar }
+    ]"
+    id="navbar"
+  >
     <!-- Logo -->
     <router-link to="/" class="text-xl font-bold text-text dark:text-dark-text hover:text-primary dark:hover:text-dark-primary transition-colors duration-300">Dev_Kiran</router-link>
 
@@ -75,6 +81,8 @@ export default {
     return {
       isMenuOpen: false,
       isDarkMode: false,
+      hideNavbar: false,
+      lastScrollY: 0,
       links: [
         { id: 1, name: "Home", href: "/" },
         { id: 2, name: "About", href: "/about" },
@@ -83,8 +91,8 @@ export default {
         { id: 5, name: "Experience", href: "/experience" },
         { id: 6, name: "Services", href: "/services" },
         { id: 7, name: "Contact", href: "/contact" },
-        { id: 8, name: "Blog", href: "/blog" },
-      ],
+        { id: 8, name: "Blog", href: "/blog" }
+      ]
     };
   },
   methods: {
@@ -95,10 +103,34 @@ export default {
       this.isDarkMode = !this.isDarkMode;
       document.documentElement.classList.toggle("dark", this.isDarkMode);
     },
+      handleScroll() {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > this.lastScrollY && currentScrollY > 50) {
+        this.hideNavbar = true; // Hide on scroll down
+      } else {
+        this.hideNavbar = false; // Show on scroll up
+      }
+      this.lastScrollY = currentScrollY;
+    },
+  },
+   mounted() {
+    this.lastScrollY = window.scrollY;
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
   },
 };
 </script>
 
 <style scoped>
-/* Add any custom styles for this component */
+nav {
+  will-change: transform;
+}
+.-translate-y-full {
+  transform: translateY(-100%);
+}
+.translate-y-0 {
+  transform: translateY(0);
+}
 </style> 
