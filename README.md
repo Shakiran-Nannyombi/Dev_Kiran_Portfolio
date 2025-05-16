@@ -74,7 +74,7 @@ This site uses [Vercel Analytics](https://vercel.com/analytics) to track page vi
 - [LinkedIn](https://www.linkedin.com/in/shakiran-nannyombi-401057222/) 
 - [Twitter](https://x.com/Shaki1Nannyombi)
 - [Email](mailto:devkiran256@gmail.com) 
-- [Email] (mailto:shakirannnannyombi@gmail.com)
+- [Email](mailto:shakirannnannyombi@gmail.com)
 
 ---
 
