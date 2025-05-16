@@ -9,11 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.3.4",
-    "vue-router": "^4.2.4",
+    "@vercel/analytics": "^1.5.0",
+    "@vitejs/plugin-vue": "^4.2.3",
     "aos": "^2.3.4",
     "vite": "^4.4.5",
-    "@vitejs/plugin-vue": "^4.2.3"
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
