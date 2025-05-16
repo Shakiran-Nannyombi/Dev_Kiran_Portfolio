@@ -70,8 +70,8 @@
 </template>
 
 <script>
-import '../assets/css/animations.css'
-import { initTextAnimations } from '../assets/js/text-animations.js'
+import '@/assets/css/animations.css'
+import { initTextAnimations } from '@/assets/js/text-animations.js'
 
 export default {
   name: 'Skills',

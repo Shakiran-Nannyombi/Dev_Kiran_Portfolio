@@ -219,14 +219,13 @@
 </template>
 
 <script>
-import projectImage from '../assets/images/project.jpeg'
-import '../assets/css/animations.css'
+import '@/assets/css/animations.css'
 
 export default {
   name: 'Projects',
   data() {
     return {
-      projectImage
+      projectImage: '/assets/images/project.jpeg'
     }
   },
   mounted() {

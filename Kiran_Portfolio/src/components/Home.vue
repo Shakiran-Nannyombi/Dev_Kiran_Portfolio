@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <!-- Background -->
+    <!-- Background with animations -->
     <div class="bg-pattern-light dark:bg-pattern-dark"></div>
 
     <!-- Content Wrapper -->
@@ -9,16 +9,18 @@
     <section id="home" class="min-h-screen flex items-center">
       <div class="container mx-auto px-8 py-32">
         <div class="max-w-4xl">
-          <!-- Welcome text -->
-          <h3 class="text-2xl text-text dark:text-dark-text mb-4 font-serif" data-aos="fade-right" data-aos-delay="100">Hey Welcome!</h3>
+          <!-- Welcome text with slide-in animation -->
+          <h3 class="text-2xl text-text dark:text-dark-text mb-4 font-serif slide-in-left" data-aos="fade-right" data-aos-delay="100">
+            Hey Welcome!
+          </h3>
           
-            <!-- Introduction -->
+            <!-- Introduction with typing animation -->
             <h1 class="text-2xl md:text-3xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent mb-6 typing-text" data-aos="fade-up" data-aos-delay="200">
             I'm Shakiran Nannyombi
             </h1>
 
-          <!-- Main heading -->
-          <h2 class="text-2xl md:text-5xl lg:text-7xl font-bold text-text dark:text-dark-text leading-tight mb-8" data-aos="fade-up" data-aos-delay="300">
+          <!-- Main heading with slide-in animation -->
+          <h2 class="text-2xl md:text-5xl lg:text-7xl font-bold text-text dark:text-dark-text leading-tight mb-8 slide-in-right" data-aos="fade-up" data-aos-delay="300">
             Designing Websites & Apps That Make a Long Lasting Impact
           </h2>
           
@@ -30,7 +32,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </router-link>
-            <a href="assets/files/CV.pdf" download class="inline-flex items-center px-6 py-3 text-lg bg-primary dark:bg-dark-primary text-white dark:text-[#0b0410] hover:bg-secondary dark:hover:bg-dark-accent hover:text-black dark:hover:text-white transition-all duration-300 rounded-lg group">
+            <a href="/assets/files/CV.pdf" download class="inline-flex items-center px-6 py-3 text-lg bg-primary dark:bg-dark-primary text-white dark:text-[#0b0410] hover:bg-secondary dark:hover:bg-dark-accent hover:text-black dark:hover:text-white transition-all duration-300 rounded-lg group">
               Download CV
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-y-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               </svg>
@@ -44,7 +46,7 @@
     <section id="about" class="min-h-screen py-8 sm:py-15 relative overflow-hidden">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col items-center max-w-6xl mx-auto">
-          <!-- Image Container -->
+          <!-- Image Container with gradient border animation -->
           <div class="w-full flex justify-center mb-4 sm:mb-8" data-aos="fade-up" data-aos-delay="100">
             <div class="relative group">
               <div class="w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] overflow-hidden rounded-[20%] relative">
@@ -180,10 +182,10 @@
 
         <!-- Projects Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- demo Project -->
+          <!-- Project cards with hover effects -->
           <div class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" data-aos="fade-up">
             <div class="relative aspect-video overflow-hidden">
-              <img src="./assets/images/project.jpeg" alt="Finnage - Finance App Landing Page" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+              <img src="/assets/images/project.jpeg" alt="Project" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-text dark:text-dark-text mb-2">Demo Project Template</h3>
@@ -194,10 +196,10 @@
             </div>
           </div>
 
-          <!-- demo Project -->
+          <!-- Second project card -->
           <div class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
             <div class="relative aspect-video overflow-hidden">
-              <img src="./assets/images/project.jpeg" alt="Archinest - Architect Agency Template" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+              <img src="/assets/images/project.jpeg" alt="Project" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-text dark:text-dark-text mb-2">Demo Project Template</h3>
@@ -224,10 +226,11 @@
 </template>
 
 <script>
-import meImage from '../assets/images/me.jpg'
-import aboutImage from '../assets/images/about.png'
-import '../assets/css/animations.css'
-import { initTextAnimations } from '../assets/js/text-animations.js'
+// Update image imports to use public directory
+const meImage = '/assets/images/me.jpg'
+const aboutImage = '/assets/images/about.png'
+import '@/assets/css/animations.css'
+import { initTextAnimations } from '@/assets/js/text-animations.js'
 
 export default {
   name: 'Home',
@@ -260,6 +263,69 @@ export default {
 </script>
 
 <style scoped>
-/* The animations and base styles are already defined in your animations.css */
-/* Additional component-specific styles can be added here */
+/* Component-specific styles */
+.bg-pattern-light,
+.bg-pattern-dark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#content-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* Ensure animations work properly */
+.typing-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+  animation: typing 3.5s steps(40, end),
+             blink .75s step-end infinite;
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 1s ease-out forwards;
+  opacity: 0;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 </style>

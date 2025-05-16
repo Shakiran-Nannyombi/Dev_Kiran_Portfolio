@@ -1,0 +1,230 @@
+/* Background Animation Keyframes */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 0%;
+    transform: scale(1);
+  }
+  25% {
+    background-position: 50% 25%;
+    transform: scale(1.02);
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: scale(1.01);
+  }
+  75% {
+    background-position: 50% 75%;
+    transform: scale(1.02);
+  }
+  100% {
+    background-position: 0% 0%;
+    transform: scale(1);
+  }
+}
+
+/* Pattern Overlay Animation */
+@keyframes patternFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.05;
+  }
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+    opacity: 0.07;
+  }
+  66% {
+    transform: translateY(5px) rotate(-1deg);
+    opacity: 0.06;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.05;
+  }
+}
+
+/* Text Animation Keyframes */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Text Animation Classes */
+.typing-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink .75s step-end infinite;
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 1s ease-out forwards;
+  opacity: 0;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Base styles to prevent overflow */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+#mobile-menu {
+  position: fixed;
+  z-index: 1000;
+  border: 1px solid;
+  @apply border-black dark:border-white; /* Tailwind way to handle borders */
+}
+
+/* Apply animations to light and dark themes */
+.bg-pattern-light {
+  animation: gradientShift 20s ease-in-out infinite;
+  background-size: 300% 300%;
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f6effb;
+}
+
+.bg-pattern-light::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 11% 37%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 50%,transparent 50%, transparent 56%,transparent 56%, transparent 100%),radial-gradient(circle at 82% 7%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 46%,transparent 46%, transparent 88%,transparent 88%, transparent 100%),radial-gradient(circle at 81% 79%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 33%,transparent 33%, transparent 89%,transparent 89%, transparent 100%),radial-gradient(circle at 68% 96%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 8%,transparent 8%, transparent 26%,transparent 26%, transparent 100%),radial-gradient(circle at 69% 20%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 84%,transparent 84%, transparent 86%,transparent 86%, transparent 100%),radial-gradient(circle at 49% 22%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 71%,transparent 71%, transparent 78%,transparent 78%, transparent 100%),radial-gradient(circle at 23% 60%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 6%,transparent 6%, transparent 40%,transparent 40%, transparent 100%),radial-gradient(circle at 86% 33%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 13%,transparent 13%, transparent 98%,transparent 98%, transparent 100%),radial-gradient(circle at 38% 60%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 15%,transparent 15%, transparent 61%,transparent 61%, transparent 100%);
+  animation: patternFloat 15s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+  transform-origin: center;
+}
+
+.bg-pattern-dark {
+  animation: gradientShift 20s ease-in-out infinite;
+  background-size: 300% 300%;
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0b0410;
+}
+
+.bg-pattern-dark::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 11% 37%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 50%,transparent 50%, transparent 56%,transparent 56%, transparent 100%),radial-gradient(circle at 82% 7%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 46%,transparent 46%, transparent 88%,transparent 88%, transparent 100%),radial-gradient(circle at 81% 79%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 33%,transparent 33%, transparent 89%,transparent 89%, transparent 100%),radial-gradient(circle at 68% 96%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 8%,transparent 8%, transparent 26%,transparent 26%, transparent 100%),radial-gradient(circle at 69% 20%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 84%,transparent 84%, transparent 86%,transparent 86%, transparent 100%),radial-gradient(circle at 49% 22%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 71%,transparent 71%, transparent 78%,transparent 78%, transparent 100%),radial-gradient(circle at 23% 60%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 6%,transparent 6%, transparent 40%,transparent 40%, transparent 100%),radial-gradient(circle at 86% 33%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 13%,transparent 13%, transparent 98%,transparent 98%, transparent 100%),radial-gradient(circle at 38% 60%, hsla(251,0%,28%,0.05) 0%, hsla(251,0%,28%,0.05) 15%,transparent 15%, transparent 61%,transparent 61%, transparent 100%);
+  animation: patternFloat 15s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+  transform-origin: center;
+}
+
+/* Main content wrapper */
+#content-wrapper {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Smooth transitions for theme switching */
+.bg-pattern-light,
+.bg-pattern-dark {
+  transition: background-color 0.3s ease;
+}
+
+/* Gradient Border Animation */
+@keyframes gradientBorder {
+  0% {
+    background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+  }
+  50% {
+    background: linear-gradient(135deg, var(--secondary), var(--accent), var(--primary));
+  }
+  100% {
+    background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+  }
+}
+
+.animate-gradient-border {
+  animation: gradientBorder 19s ease infinite;
+  background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+}
+
+/* Image hover effect */
+.group:hover .animate-gradient-border {
+  animation: gradientBorder 19s ease infinite; 
+}
+
+/* Continuous Scrolling Animations */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 30s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 30s linear infinite;
+}
+
+/* Hover effects for skill items */
+.rounded-full {
+  transition: all 0.3s ease;
+}
+
+.rounded-full:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+} 
