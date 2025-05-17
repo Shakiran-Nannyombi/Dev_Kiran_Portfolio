@@ -2,7 +2,7 @@
   <div class="relative min-h-screen overflow-hidden">
 
     <!-- Background with animations -->
-   <div class="absolute inset-0 w-full h-full bg-pattern-light dark:bg-pattern-dark animate-gradientShift bg-repeat bg-[length:200%_200%] z-0 pointer-events-none"></div>
+   <div class="absolute inset-0 w-full h-full bg-pattern-light dark:bg-pattern-dark animate-gradientShift bg-repeat bg-[length:400%_400%] z-0 pointer-events-none"></div>
    
     <!-- Content Wrapper -->
     <div id="content-wrapper" class=" relative z-10 text-text dark:text-dark-text relative z-2 min-h-screen w-full">

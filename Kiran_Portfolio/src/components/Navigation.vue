@@ -160,11 +160,20 @@ export default {
 <style scoped>
 nav {
   will-change: transform;
+  background: rgba(247, 246, 254, 0.8); /* Light mode: semi-transparent white */
+  backdrop-filter: blur(8px);
+  transition: background 0.3s;
 }
+
+/* Dark mode via .dark class */
+.dark nav {
+  background: rgba(2, 1, 9, 0.8); /* Dark mode: semi-transparent dark */
+}
+
 .-translate-y-full {
   transform: translateY(-100%);
 }
 .translate-y-0 {
   transform: translateY(0);
 }
-</style> 
+</style>
