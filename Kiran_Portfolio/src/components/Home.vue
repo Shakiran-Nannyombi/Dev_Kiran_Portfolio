@@ -1,10 +1,11 @@
 <template>
-  <div class="relative">
-    <!-- Background with animations -->
-    <div class="bg-pattern-light dark:bg-pattern-dark"></div>
+  <div class="relative min-h-screen overflow-hidden">
 
+    Background with animations
+   <div class="absolute inset-0 w-full h-full bg-pattern-light dark:bg-pattern-dark animate-gradientShift bg-repeat bg-[length:200%_200%] z-0 pointer-events-none"></div>
+   
     <!-- Content Wrapper -->
-    <div id="content-wrapper" class="text-text dark:text-dark-text relative z-2 min-h-screen w-full">
+    <div id="content-wrapper" class=" relative z-10 text-text dark:text-dark-text relative z-2 min-h-screen w-full">
        <!-- Welcome Section -->
     <section id="home" class="min-h-screen flex items-center">
       <div class="container mx-auto px-8 py-32">
@@ -264,16 +265,6 @@ export default {
 
 <style scoped>
 /* Component-specific styles */
-.bg-pattern-light,
-.bg-pattern-dark {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
 #content-wrapper {
   position: relative;
   z-index: 2;

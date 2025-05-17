@@ -1,13 +1,25 @@
 <template>
   <nav
     :class="[
-      'fixed top-0 left-0 w-full z-[9999] bg-transparent transition-all duration-300 ease-in-out flex justify-between items-center px-8 py-4 max-w-[12000px] mx-auto',
-      { '-translate-y-full': hideNavbar, 'translate-y-0': !hideNavbar }
-    ]"
-    id="navbar"
+    'fixed top-0 left-0 w-full z-[9999] bg-transparent flex justify-between items-center px-8 py-4 max-w-[12000px] mx-auto transition-all ease-in-out',
+    hideNavbar
+      ? 'transform -translate-y-full duration-0'
+      : 'transform translate-y-0 duration-300',
+    isScrollingUp ? 'shadow-xl bg-white/70 dark:bg-gray-900/70 backdrop-blur-md' : ''
+  ]"
+  id="navbar"
   >
     <!-- Logo -->
-    <router-link to="/" class="text-xl font-bold text-text dark:text-dark-text hover:text-primary dark:hover:text-dark-primary transition-colors duration-300">Dev_Kiran</router-link>
+     <router-link to="/" class="flex items-center gap-2">
+      <img 
+      src="/assets/images/profile.png"
+      alt="Dev Kiran Profile"
+      class="w-10 h-10 rounded-full object-cover"
+      />
+      <span class="text-s text-text dark:text-dark-text hover:text-primary dark:hover:text-dark-primary transition-colors duration-300">
+        Dev_Kiran
+      </span>
+    </router-link>
 
     <!-- Links for Large Screens -->
     <ul class="hidden md:flex gap-6 text-lg">
@@ -61,12 +73,13 @@
         </button>
         <div v-show="isMenuOpen" class="absolute right-0 top-16 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg py-2">
           <router-link
-            v-for="link in links"
-            :key="link.id"
-            :to="link.href"
-            class="block px-4 py-2 text-text dark:text-dark-text hover:text-secondary dark:hover:text-dark-secondary hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300"
-          >
-            {{ link.name }}
+           v-for="link in links"
+           :key="link.id"
+           :to="link.href"
+           @click="isMenuOpen = false"
+           class="block px-4 py-2 ..."
+            >
+             {{ link.name }}
           </router-link>
         </div>
       </div>
@@ -82,7 +95,9 @@ export default {
       isMenuOpen: false,
       isDarkMode: false,
       hideNavbar: false,
+      isScrollingUp: false,
       lastScrollY: 0,
+      scrollTimeout: null,
       links: [
         { id: 1, name: "Home", href: "/" },
         { id: 2, name: "About", href: "/about" },
@@ -103,22 +118,41 @@ export default {
       this.isDarkMode = !this.isDarkMode;
       document.documentElement.classList.toggle("dark", this.isDarkMode);
     },
-      handleScroll() {
+    handleScroll() {
       const currentScrollY = window.scrollY;
+      if (currentScrollY <= 0) {
+        this.hideNavbar = false;
+        this.isScrollingUp = false;
+        this.lastScrollY = 0;
+        return;
+      }
       if (currentScrollY > this.lastScrollY && currentScrollY > 50) {
-        this.hideNavbar = true; // Hide on scroll down
-      } else {
-        this.hideNavbar = false; // Show on scroll up
+        // Scrolling down
+        this.hideNavbar = true;
+        this.isScrollingUp = false;
+      } else if (currentScrollY < this.lastScrollY) {
+        // Scrolling up
+        this.hideNavbar = false;
+        this.isScrollingUp = true;
+        // Remove highlight after a short delay
+        clearTimeout(this.scrollTimeout);
+        this.scrollTimeout = setTimeout(() => {
+          this.isScrollingUp = false;
+        }, 600); // Adjust highlight duration as needed
       }
       this.lastScrollY = currentScrollY;
+      if (this.isMenuOpen) {
+       this.isMenuOpen = false;
+    }
     },
   },
-   mounted() {
+  mounted() {
     this.lastScrollY = window.scrollY;
     window.addEventListener('scroll', this.handleScroll);
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
+    if (this.scrollTimeout) clearTimeout(this.scrollTimeout);
   },
 };
 </script>
