@@ -87,6 +87,126 @@
         </div>
       </section>
 
+      <!-- Soft Skills -->
+      <section class="py-16">
+        <div class="container mx-auto px-8">
+          <h2 class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent mb-12 text-center" data-aos="fade-up">
+            Soft Skills
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Soft Skill Card Example -->
+            <div class="bg-white/80 dark:bg-dark-text/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-gray-100 dark:border-gray-800" data-aos="fade-up">
+              <div class="p-8">
+                <div class="mb-6 flex items-center">
+                  <img src="/assets/images/communication.png" alt="Soft Skill" class="h-12 w-12 mr-4">
+                  <h3 class="text-2xl font-bold text-primary dark:text-dark-primary">Communication</h3>
+                </div>
+                <p class="text-text dark:text-dark-background">
+                  I excel in clear and effective communication, ensuring that ideas and feedback are conveyed accurately.
+                </p>
+              </div>
+            </div>
+
+            <!-- Add more soft skill cards here -->
+            <div class="bg-white/80 dark:bg-dark-text/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-gray-100 dark:border-gray-800" data-aos="fade-up">
+              <div class="p-8">
+                <div class="mb-6 flex items-center">
+                  <img src="/assets/images/teamwork.png" alt="Soft Skill" class="h-12 w-12 mr-4">
+                  <h3 class="text-2xl font-bold text-primary dark:text-dark-primary">Teamwork</h3>
+                </div>
+                <p class="text-text dark:text-dark-background">
+                  I thrive in collaborative environments, working effectively with diverse teams to achieve common goals.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white/80 dark:bg-dark-text/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-gray-100 dark:border-gray-800" data-aos="fade-up">
+              <div class="p-8">
+                <div class="mb-6 flex items-center">
+                  <img src="/assets/images/problemsolving.png" alt="Soft Skill" class="h-12 w-12 mr-4">
+                  <h3 class="text-2xl font-bold text-primary dark:text-dark-primary">Problem Solving</h3>
+                </div>
+                <p class="text-text dark:text-dark-background">
+                  I approach challenges with a solution-oriented mindset, analyzing problems and implementing effective strategies.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white/80 dark:bg-dark-text/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-gray-100 dark:border-gray-800" data-aos="fade-up">
+              <div class="p-8">
+                <div class="mb-6 flex items-center">
+                  <img src="/assets/images/leadership.png" alt="Soft Skill" class="h-12 w-12 mr-4">
+                  <h3 class="text-2xl font-bold text-primary dark:text-dark-primary">Leadership</h3>
+                </div>
+                <p class="text-text dark:text-dark-background">
+                  I possess strong leadership skills, guiding teams towards success while fostering a positive and inclusive environment.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white/80 dark:bg-dark-text/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-gray-100 dark:border-gray-800" data-aos="fade-up">
+              <div class="p-8">
+                <div class="mb-6 flex items-center">
+                  <img src="/assets/images/adaptability.png" alt="Soft Skill" class="h-12 w-12 mr-4">
+                  <h3 class="text-2xl font-bold text-primary dark:text-dark-primary">Adaptability</h3>
+                </div>
+                <p class="text-text dark:text-dark-background">
+                  I am adaptable and open to change, quickly adjusting to new situations and challenges.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white/80 dark:bg-dark-text/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-gray-100 dark:border-gray-800" data-aos="fade-up">
+              <div class="p-8">
+                <div class="mb-6 flex items-center">
+                  <img src="/assets/images/timemanagement.png" alt="Soft Skill" class="h-12 w-12 mr-4">
+                  <h3 class="text-2xl font-bold text-primary dark:text-dark-primary">Time Management</h3>
+                </div>
+                <p class="text-text dark:text-dark-background">
+                  I excel in managing my time effectively, prioritizing tasks to meet deadlines and deliver high-quality work.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white/80 dark:bg-dark-text/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-gray-100 dark:border-gray-800" data-aos="fade-up">
+              <div class="p-8">
+                <div class="mb-6 flex items-center">
+                  <img src="/assets/images/creativity.png" alt="Soft Skill" class="h-12 w-12 mr-4">
+                  <h3 class="text-2xl font-bold text-primary dark:text-dark-primary">Creativity</h3>
+                </div>
+                <p class="text-text dark:text-dark-background">
+                  I bring a creative approach to problem-solving, generating innovative ideas and solutions.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white/80 dark:bg-dark-text/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-gray-100 dark:border-gray-800" data-aos="fade-up">
+              <div class="p-8">
+                <div class="mb-6 flex items-center">
+                  <img src="/assets/images/criticalthinking.png" alt="Soft Skill" class="h-12 w-12 mr-4">
+                  <h3 class="text-2xl font-bold text-primary dark:text-dark-primary">Critical Thinking</h3>
+                </div>
+                <p class="text-text dark:text-dark-background">
+                  I apply critical thinking skills to analyze situations and make informed decisions.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white/80 dark:bg-dark-text/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-gray-100 dark:border-gray-800" data-aos="fade-up">
+              <div class="p-8">
+                <div class="mb-6 flex items-center">
+                  <img src="/assets/images/organization.png" alt="Soft Skill" class="h-12 w-12 mr-4">
+                  <h3 class="text-2xl font-bold text-primary dark:text-dark-primary">Organization</h3>
+                </div>
+                <p class="text-text dark:text-dark-background">
+                  I am highly organized, maintaining structure and clarity in my work processes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
        <!-- Certificates Section -->
         <section id="certificates" class="min-h-screen py-8 sm:py-15 relative overflow-hidden">
           <h2 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent  mb-12 text-center">
