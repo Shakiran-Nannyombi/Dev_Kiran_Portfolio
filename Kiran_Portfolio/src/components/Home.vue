@@ -1,7 +1,7 @@
 <template>
   <div class="relative min-h-screen overflow-hidden">
 
-    Background with animations
+    <!-- Background with animations -->
    <div class="absolute inset-0 w-full h-full bg-pattern-light dark:bg-pattern-dark animate-gradientShift bg-repeat bg-[length:200%_200%] z-0 pointer-events-none"></div>
    
     <!-- Content Wrapper -->
@@ -11,7 +11,7 @@
       <div class="container mx-auto px-8 py-32">
         <div class="max-w-4xl">
           <!-- Welcome text with slide-in animation -->
-          <h3 class="text-2xl text-text dark:text-dark-text mb-4 font-serif slide-in-left" data-aos="fade-right" data-aos-delay="100">
+          <h3 class="text-2xl text-secondary dark:text-dark-text mb-4 font-bold font-serif slide-in-left" data-aos="fade-right" data-aos-delay="100">
             Hey Welcome!
           </h3>
           
@@ -21,7 +21,7 @@
             </h1>
 
           <!-- Main heading with slide-in animation -->
-          <h2 class="text-2xl md:text-5xl lg:text-7xl font-bold text-text dark:text-dark-text leading-tight mb-8 slide-in-right" data-aos="fade-up" data-aos-delay="300">
+          <h2 class="text-2xl md:text-5xl lg:text-7xl font-bold font-serif text-text dark:text-dark-text leading-tight mb-8 slide-in-right" data-aos="fade-up" data-aos-delay="300">
             Designing Websites & Apps That Make a Long Lasting Impact
           </h2>
           
@@ -39,186 +39,6 @@
               </svg>
             </a>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="min-h-screen py-8 sm:py-15 relative overflow-hidden">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col items-center max-w-6xl mx-auto">
-          <!-- Image Container with gradient border animation -->
-          <div class="w-full flex justify-center mb-4 sm:mb-8" data-aos="fade-up" data-aos-delay="100">
-            <div class="relative group">
-              <div class="w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] overflow-hidden rounded-[20%] relative">
-                <!-- Gradient Border -->
-                <div class="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-[20%] animate-gradient-border">
-                <!-- Image -->
-                <img 
-                  :src="meImage" 
-                  alt="Dev_Kiran" 
-                  class="relative w-full h-full object-cover object-center transform group-hover:scale-105 transition duration-700 rounded-[20%] p-[8px]"
-                >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Content Container -->
-          <div class="w-full bg-white/20 dark:bg-gray-500/20 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-lg space-y-4 sm:space-y-6">
-            <div class="text-center sm:text-left">
-              <h2 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent mb-4" data-aos="fade-up">About Me</h2>
-              <p class="text-lg text-text/80 dark:text-dark-text/80 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-                I'm a Software Engineer in the making, passionate about <span class="font-bold">Data Science, Web Development, and Design</span>.
-                I love exploring new technologies, building user-friendly applications, and sharing what I learn.
-                Currently, I'm honing my skills in <span class="font-bold">JavaScript and Python</span>, constantly pushing my boundaries. <br>
-                Let's build something amazing together!
-              </p>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="space-y-4" data-aos="fade-up">
-              <h3 class="text-xl font-semibold text-secondary dark:text-dark-accent text-center sm:text-left">Get in Touch</h3>
-              <div class="flex flex-col items-center sm:items-start space-y-2">
-                <a href="mailto:shakirannannyombi@gmail.com" class="flex items-center gap-3 text-text/80 dark:text-dark-text/80 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  shakirannannyombi@gmail.com
-                </a>
-                <a href="mailto:devkiran256@gmail.com" class="flex items-center gap-3 text-text/80 dark:text-dark-text/80 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  devkiran256@gmail.com
-                </a>
-                <a href="tel:+256770522627" class="flex items-center gap-3 text-text/80 dark:text-dark-text/80 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  +256-770-522-627
-                </a>
-              </div>
-            </div>
-
-            <!-- Social Links -->
-            <div class="space-y-4" data-aos="fade-up">
-              <h3 class="text-xl font-semibold text-secondary dark:text-dark-accent text-center sm:text-left">Connect With Me</h3>
-              <div class="flex flex-wrap justify-center sm:justify-start gap-6">
-                <!-- GitHub -->
-                <a href="https://github.com/Shakiran-Nannyombi" class="text-text/70 dark:text-dark-text/70 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300 transform hover:scale-110">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
-                  </svg>
-                </a>
-                
-                <!-- X (Twitter) -->
-                <a href="https://x.com/Shaki1Nannyombi" class="text-text/70 dark:text-dark-text/70 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300 transform hover:scale-110">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-                  </svg>
-                </a>
-                
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/shakiran-nannyombi-401057222 " class="text-text/70 dark:text-dark-text/70 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300 transform hover:scale-110">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
-                  </svg>
-                </a>
-                
-                <!-- Devpost -->
-                <a href="https://devpost.com/Shakiran-Nannyombi?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" class="text-text/70 dark:text-dark-text/70 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300 transform hover:scale-110">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M6.002 1.61c0 .351.285.636.636.636h1.323a.636.636 0 00.636-.636.636.636 0 00-.636-.636H6.638a.636.636 0 00-.636.636zm14.75 3.267a.636.636 0 00-.636-.636h-1.323a.636.636 0 00-.636.636.636.636 0 00.636.636h1.323a.636.636 0 00.636-.636zM12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.182c5.385 0 9.818 4.433 9.818 9.818 0 5.385-4.433 9.818-9.818 9.818-5.385 0-9.818-4.433-9.818-9.818 0-5.385 4.433-9.818 9.818-9.818zm-1.323 3.267a.636.636 0 00-.636.636v1.323c0 .351.285.636.636.636.351 0 .636-.285.636-.636V6.085a.636.636 0 00-.636-.636zm2.646 0a.636.636 0 00-.636.636v1.323c0 .351.285.636.636.636.351 0 .636-.285.636-.636V6.085a.636.636 0 00-.636-.636zM12 8.727c-1.805 0-3.273 1.468-3.273 3.273 0 1.805 1.468 3.273 3.273 3.273 1.805 0 3.273-1.468 3.273-3.273 0-1.805-1.468-3.273-3.273-3.273zm0 1.323c1.074 0 1.95.876 1.95 1.95 0 1.074-.876 1.95-1.95 1.95-1.074 0-1.95-.876-1.95-1.95 0-1.074.876-1.95 1.95-1.95z"></path>
-                  </svg>
-                </a>
-                
-                <!-- Discord -->
-                <a href="https://discord.com/users/kiran085052" class="text-text/70 dark:text-dark-text/70 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300 transform hover:scale-110">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"></path>
-                  </svg>
-                </a>
-                
-                <!-- Codewars -->
-                <a href="https://www.codewars.com/users/Shakiran-Nannyombi" class="text-text/70 dark:text-dark-text/70 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300 transform hover:scale-110">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M11.616.455l-1.077 3.262-3.262 1.077 3.262 1.077 1.077 3.262 1.077-3.262 3.262-1.077-3.262-1.077L11.616.455zm-8.5 8.5l-1.077 3.262-3.262 1.077 3.262 1.077 1.077 3.262 1.077-3.262 3.262-1.077-3.262-1.077L3.116 8.955zm17 0l-1.077 3.262-3.262 1.077 3.262 1.077 1.077 3.262 1.077-3.262 3.262-1.077-3.262-1.077L20.116 8.955z"></path>
-                  </svg>
-                </a>
-                
-                <!-- Kaggle -->
-                <a href="https://www.kaggle.com/shakiran" class="text-text/70 dark:text-dark-text/70 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300 transform hover:scale-110">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"></path>
-                  </svg>
-                </a>
-                
-                <!-- Medium -->
-                <a href="https://medium.com/@devkiran256" class="text-text/70 dark:text-dark-text/70 hover:text-primary dark:hover:text-dark-primary transition-colors duration-300 transform hover:scale-110">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Projects Section -->
-    <section id="projects" class="min-h-screen py-20">
-      <div class="container mx-auto px-8">
-        <!-- Section Header -->
-        <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent mb-4">
-            Selected Projects
-          </h2>
-          <p class="text-lg text-text/80 dark:text-dark-text/80 max-w-2xl mx-auto">
-            Here are some of my featured projects that showcase my skills in web development, design, and problem-solving.
-          </p>
-        </div>
-
-        <!-- Projects Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Project cards with hover effects -->
-          <div class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" data-aos="fade-up">
-            <div class="relative aspect-video overflow-hidden">
-              <img src="/assets/images/project.jpeg" alt="Project" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-text dark:text-dark-text mb-2">Demo Project Template</h3>
-              <div class="flex gap-2 mb-4">
-                <span class="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">Web Design</span>
-                <span class="px-3 py-1 text-sm rounded-full bg-secondary/10 text-secondary dark:bg-dark-secondary/10 dark:text-dark-secondary">Frontend Development</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Second project card -->
-          <div class="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/5 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
-            <div class="relative aspect-video overflow-hidden">
-              <img src="/assets/images/project.jpeg" alt="Project" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-text dark:text-dark-text mb-2">Demo Project Template</h3>
-              <div class="flex gap-2 mb-4">
-                <span class="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">Web Design</span>
-                <span class="px-3 py-1 text-sm rounded-full bg-secondary/10 text-secondary dark:bg-dark-secondary/10 dark:text-dark-secondary">Frontend Development</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- View All Projects Button -->
-        <div class="flex justify-center mt-12" data-aos="fade-up" data-aos-delay="400">
-          <router-link to="/projects" class="inline-flex items-center px-6 py-3 text-lg border-2 border-primary hover:border-secondary dark:border-dark-primary hover:dark:border-dark-accent text-primary dark:text-dark-primary hover:bg-secondary hover:text-white dark:hover:bg-dark-accent dark:hover:text-[#0b0410] transition-all duration-300 rounded-lg group">
-            View All Projects
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </router-link>
         </div>
       </div>
     </section>
@@ -264,6 +84,7 @@ export default {
 </script>
 
 <style scoped>
+
 /* Component-specific styles */
 #content-wrapper {
   position: relative;
